@@ -1,0 +1,108 @@
+.Cards {
+  transition: all 1s;
+}
+
+.showForm {
+  width: 400px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: all 1s;
+  &--Top {
+    position: relative;
+
+    &-h3 {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    &-show {
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-top: -15px;
+      cursor: pointer;
+    }
+
+    &-hide {
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+
+  &--Top::after {
+    content: "";
+    position: absolute;
+    background-color: #1f1f1f;
+    height: 1px;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &--Middle {
+    position: relative;
+    transition: all 1s;
+    &-p {
+      font-size: 0.8rem;
+      padding: 0 10px;
+      line-height: 25px;
+      animation: move-apear 0.5s;
+    }
+
+    &-ul li {
+      animation: move-apear 0.5s;
+    }
+
+    &-ul li p {
+      font-size: 0.8rem;
+      padding: 0 15px;
+    }
+  }
+
+  &--Middle::after {
+    content: "";
+    position: absolute;
+    background-color: #1f1f1f;
+    height: 1px;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.showForm--Bottom {
+  &-h3 {
+    font-weight: 400;
+  }
+  &-right {
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.flex2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+@keyframes move-apear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
